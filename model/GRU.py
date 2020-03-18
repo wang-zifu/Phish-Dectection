@@ -6,7 +6,7 @@ from tensorflow.contrib.rnn import GRUCell
 from .Attention import SentenceMode, Attention  
 
 
-class LstmModel(BaseModel):
+class GRUModel(BaseModel):
     def __init__(self,
                  model_path,
                  num_targets,
@@ -16,7 +16,7 @@ class LstmModel(BaseModel):
                  hidden_layer=128,
                  attention_size=64,
                  sentence_mode=SentenceMode.ATTENTION, ):
-        super(LstmModel, self).__init__(model_path,
+        super(GRUModel, self).__init__(model_path,
                                         num_targets,
                                         vocab_size,
                                         embed_size,
